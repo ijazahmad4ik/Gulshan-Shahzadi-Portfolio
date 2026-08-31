@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gulshan Shahzadi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="page-header animate-up">
+            <h1>Let's Connect</h1>
+            <p>Let's connect for freelance work or job opportunities</p>
+        </div>
+
+        <section class="grid-2 animate-up delay-1">
+            <div>
+                <h2 style="margin-bottom: 0.5rem;">Gulshan Shahzadi</h2>
+                <p style="margin-bottom: 2.5rem; color: var(--neutral-dark);">I am currently open for freelance projects and full-time opportunities. Feel free to reach out using the form or connect via social platforms.</p>
+                
+                <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">Location</h4>
+                        <p style="margin: 0; color: var(--neutral-dark);">Zafarwal, Punjab, Pakistan</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-envelope" style="color: var(--accent-color); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">Email</h4>
+                        <p style="margin: 0;"><a href="mailto:ijazahmad4ik@gmail.com" style="color: var(--neutral-dark); text-decoration: none;">ijazahmad4ik@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fab fa-whatsapp" style="color: var(--accent-color); font-size: 1.5rem; width: 30px; text-align: center;"></i>
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">WhatsApp</h4>
+                        <p style="margin: 0; color: var(--neutral-dark);">03049843929</p>
+                    </div>
+                </div>
+
+                <!-- Direct Contact Buttons -->
+                <div style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <a href="mailto:ijazahmad4ik@gmail.com" class="btn btn-outline" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://wa.me/923049843929" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #25D366; border-color: #25D366; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> WhatsApp Me
+                    </a>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 style="margin-bottom: 1rem;">Follow My Journey</h4>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" class="social-link-box" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link-box" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-box" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-box" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submission simulated successfully!');">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required placeholder="Subject of your message">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" class="form-control" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
