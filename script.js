@@ -61,16 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Highlight active link based on current URL
-    const currentPath = window.location.pathname;
-    const currentPage = currentPath.split('/').pop() || 'index.html';
-    
+    // 4. Highlight active link based on current URL (handles clean URLs and .html)
+    const rawPathname = window.location.pathname.toLowerCase().replace(/\/$/, '');
+    const currentSegment = rawPathname.split('/').pop() || 'index';
+    const currentClean = currentSegment.replace(/\.html$/, '');
+
     const navLinks = document.querySelectorAll('.nav-links');
     navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage) {
+        const linkHref = (link.getAttribute('href') || '').toLowerCase();
+        const linkSegment = linkHref.split('/').pop() || 'index';
+        const linkClean = linkSegment.replace(/\.html$/, '');
+
+        if (currentClean === linkClean || (currentClean === '' && linkClean === 'index')) {
             link.classList.add('active-link');
         }
+
+        // Close mobile menu when a nav link is clicked
+        link.addEventListener('click', () => {
+            if (mobileMenu && navMenu) {
+                mobileMenu.classList.remove('is-active');
+                navMenu.classList.remove('active');
+            }
+        });
     });
 
     // 5. Portfolio Filtering Logic
